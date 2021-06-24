@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publish Page</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="flex flex-col h-screen relative">
+    <header class="flex h-16 justify-center items-center text-xl bg-black text-white">
+      <div>ion-sfu</div>
+      <div class="absolute top-2 right-5">
+        <button id="bnt_pubcam" class="bg-blue-500 px-4 py-2 text-white rounded-lg mr-5" onclick="start(true)">Publish Camera</button>
+        <button id="bnt_pubscreen" class="bg-green-500 px-4 py-2 text-white rounded-lg" onclick="start(false)">Publish Screen</button>
+      </div>
+    </header>
+    <div class="min-w-1/2" id="localVideo"></div>
+    <div class="min-w-1/2" id="remoteVideos"></div>
+  </div>
+  <script src="https://unpkg.com/ion-sdk-js@1.5.5/dist/ion-sdk.min.js"></script>
+  <script src="https://unpkg.com/ion-sdk-js@1.5.5/dist/json-rpc.min.js"></script>
+  <script src="./main.js" ></script>
+</body>
+</html>
